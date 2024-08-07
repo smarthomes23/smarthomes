@@ -1,0 +1,199 @@
+/* Colors
+Green : #BD9A68
+*/
+
+/* ------------------------------------Global Start------------------------------------ */
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.sh-btn{
+    background: #BD9A68;
+    color: white;
+    border: 0;
+    border-radius: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.sh-btn:hover{
+    background: black;
+    color: white
+}
+.sh-outline-btn{
+    background: transparent;
+    color: #BD9A68;
+    border: 1px solid #BD9A68;
+    border-radius: 8px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.sh-outline-btn:hover{
+    background: #BD9A68;
+    color: white
+}
+/* ------------------------------------Global Start------------------------------------ */
+
+
+/* ------------------------------------Fonts Start------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+.vidaloka{
+    font-family: 'Vidaloka', serif;
+}
+/* ------------------------------------Fonts End------------------------------------ */
+
+
+/* ------------------------------------Navbar Start------------------------------------ */
+.navigationbar{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    z-index: 10;
+}
+.navigationbar a{
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+}
+.navigationbar>nav{
+    max-width: 1400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menus{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menus>li{
+    display: inline;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+.menus .menu-logo{
+    font-size: 2.5rem !important;
+}
+.menus>li{
+    position: relative;
+}
+.drop-down{
+    position: absolute;
+    width: 400%;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    background: rgb(44, 44, 44);
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 1s;
+    display: none;
+    z-index: 5;
+}
+.drop-down>a{
+    display: block;
+    margin-bottom: 20px;
+    color: rgb(168, 168, 168);
+    transition: all 0.2s;
+}
+.drop-down>a:hover{
+    color: white;
+}
+.menus>li:hover>.drop-down{
+    display: block;
+}
+/* ------------------------------------Navbar End------------------------------------ */
+
+
+
+
+/* ------------------------------------Banner Start------------------------------------ */
+.banner{
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../images/villa1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.slider-change-btns{
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.slider-change-btns>button:first-child{
+    margin-bottom: 20px;
+}
+.slider-change-btns>button{
+    background-color: transparent;
+    border: 2px solid #bd9a6800;
+    font-size: 0.3rem;
+    color: white;
+    display: block;
+    padding: 4px;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+}
+.slider-change-btn-outline{
+    border: 2px solid #BD9A68 !important;
+}
+.banner-content{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+.banner-content>p{
+    text-align: center;
+    color: white;
+}
+.banner-content>p:first-child{
+    font-size: 4.5rem;
+}
+.banner-down-arrows{
+    color: white;
+    font-size: 2rem;
+    font-weight: lighter;
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translateX(-50%);
+}
+.banner-down-arrows>i{
+    display: block;
+}
+.banner-down-arrows>i:nth-child(1){animation: movingDownArrow1 1.5s ease-in-out 0.4s infinite normal forwards;}
+.banner-down-arrows>i:nth-child(2){animation: movingDownArrow2 1.5s ease-in-out 0.2s infinite normal forwards;}
+.banner-down-arrows>i:nth-child(3){animation: movingDownArrow3 1.5s ease-in-out 0s infinite normal forwards;}
+
+.mask-01 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    -webkit-mask-image: url('../images/cross.png');
+    mask-image: url('../images/cross.png');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: right;
+    mask-position: right;
+}
+
+.mask-01 > img {
+    height: 100%;
+    filter: brightness(0.5);
+}
+
+/* ------------------------------------Banner End------------------------------------ */
+
+
+/* ------------------------------------Section 01 Start------------------------------------ */
+
+/* ------------------------------------Section 01 End------------------------------------ */
