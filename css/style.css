@@ -43,11 +43,12 @@ Green : #BD9A68
 
 /* ------------------------------------Navbar Start------------------------------------ */
 .navigationbar{
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 1;
     width: 100%;
     z-index: 10;
+    transition: all 1s;
 }
 .navigationbar a{
     text-decoration: none;
@@ -101,6 +102,10 @@ Green : #BD9A68
 }
 .menus>li:hover>.drop-down{
     display: block;
+}
+.navigationbar.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 /* ------------------------------------Navbar End------------------------------------ */
 
@@ -173,23 +178,6 @@ Green : #BD9A68
 .banner-down-arrows>i:nth-child(2){animation: movingDownArrow2 1.5s ease-in-out 0.2s infinite normal forwards;}
 .banner-down-arrows>i:nth-child(3){animation: movingDownArrow3 1.5s ease-in-out 0s infinite normal forwards;}
 
-.mask-01 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    -webkit-mask-image: url('../images/cross.png');
-    mask-image: url('../images/cross.png');
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: right;
-    mask-position: right;
-}
-
-.mask-01 > img {
-    height: 100%;
-    filter: brightness(0.5);
-}
 
 /* ------------------------------------Banner End------------------------------------ */
 
@@ -197,3 +185,38 @@ Green : #BD9A68
 /* ------------------------------------Section 01 Start------------------------------------ */
 
 /* ------------------------------------Section 01 End------------------------------------ */
+
+/* ------------------------------------Amenities Start------------------------------------ */
+
+.amenities>div>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.amenities>div>div>div{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: #BD9A68;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid #BD9A68;
+    outline-offset: 5px;
+}
+.amenities>div>div>div>i{
+    font-size: 3.5rem;
+    color: white;
+}
+.facility-title{
+    margin-top: 30px;
+    font-family: 'Vidaloka', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.facility-description{
+    text-align: center;
+    color: rgb(97, 97, 97);
+}
+/* ------------------------------------Amenities End------------------------------------ */
