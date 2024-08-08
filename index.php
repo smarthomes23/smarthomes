@@ -22,6 +22,11 @@
                 </div>
             </div>
         </div>
+        <div class="text-success fs-1 position-absolute">
+            <i class="bi bi-chevron-down position-absolute"></i>
+            <i class="bi bi-chevron-down position-absolute"></i>
+            <i class="bi bi-chevron-down position-absolute"></i>
+        </div>
     </section>
 
     <div class="section-1 container my-5">

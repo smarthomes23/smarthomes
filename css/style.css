@@ -91,6 +91,14 @@ Green : #BD9A68
     animation: slideUp 0.8s ease-in-out 0.4s 1 normal forwards;
 }
 
+.banner>div:last-child{
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.banner>div:last-child>i:nth-child(1){top: -20px; animation: slideDown 2s linear 0.4s infinite normal forwards;}
+.banner>div:last-child>i:nth-child(2){top: -10px; animation: slideDown 2s linear 0.2s infinite normal forwards;}
+.banner>div:last-child>i:nth-child(3){top: 0px; animation: slideDown 2s linear 0s infinite normal forwards;}
 /* ------------------------------------Banner End------------------------------------ */
 
 
