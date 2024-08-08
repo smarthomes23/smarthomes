@@ -78,7 +78,7 @@ Green : #BD9A68
     transform: translate(-50%,-50%);
 }
 .content>p:first-child{
-    font-size: 4rem;
+    font-size: 3rem;
     opacity: 0;
     animation: slideUp 0.8s ease-in-out 0s 1 normal forwards;
 }
