@@ -1,34 +1,28 @@
-@media only screen and (max-width:600px) {
-    .banner{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('../images/villa1.png') !important;
-    }
-    .slider-change-btns{
+/* Media Queries */
+
+@media (min-width: 1400px) {
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .cross-img{
         display: none;
     }
-    .banner-content{
-        top: 20%;
-    }
 }
-@media only screen and (max-width:768px) {
-    .banner-content{
-        top: 20%;
-    }
-    
-}
-@media only screen and (max-width:992px) {
-    .banner-content{
-        top: 30%;
-    }
-    .menus>li:not(.menus>li:nth-child(4)){
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .cross-img{
         display: none;
     }
-    
 }
-@media only screen and (max-width:1200px) {
-    .menus{
-        width: 100%;
-    }
-    .nav-contact{
+
+@media (max-width: 575.98px) {
+    .cross-img{
         display: none;
     }
 }
