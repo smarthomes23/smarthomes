@@ -2,6 +2,22 @@
 Green : #BD9A68
 */
 
+/* ------------------------------------Fonts Start------------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+.vidaloka {
+    font-family: "Vidaloka", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.bg-F9FAF1{
+    background-color: #F9FAF1;
+}
+.white-filter{
+    filter: brightness(0) invert(1);
+}
+/* ------------------------------------Fonts End------------------------------------ */
+
+
 /* ------------------------------------Global Start------------------------------------ */
 *{
     font-family: 'Montserrat', sans-serif;
@@ -9,7 +25,7 @@ Green : #BD9A68
 .sh-btn{
     background: #BD9A68;
     width: 200px;
-    padding: 10px 20px;
+    padding: 20px;
     cursor: pointer;
     transition: all 0.5s;
     border-radius: 5px;
@@ -33,13 +49,6 @@ Green : #BD9A68
 /* ------------------------------------Global Start------------------------------------ */
 
 
-/* ------------------------------------Fonts Start------------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
-.vidaloka{
-    font-family: 'Vidaloka', serif;
-}
-/* ------------------------------------Fonts End------------------------------------ */
-
 
 
 /* ------------------------------------Banner Start------------------------------------ */
@@ -52,6 +61,24 @@ Green : #BD9A68
     position: relative;
     overflow-x: hidden;
 }
+.banner .controls{
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.banner .controls .custom-radio{
+    border: 2px solid #BD9A68;
+    appearance: none;
+    background-color: rgba(75, 31, 31, 0);
+
+    cursor: pointer;
+}
+.banner .controls .custom-radio:checked::before{
+    content: '';
+    background-color: #BD9A68;
+    color: #BD9A68;
+}
 .cross-img{
     height: inherit;
     width: 50%;
@@ -60,6 +87,7 @@ Green : #BD9A68
     top: 0;
     right: 0;
     opacity: 0;
+    z-index: 1;
 }
 .cross-img-1{
     background: #BD9A68;
@@ -71,47 +99,78 @@ Green : #BD9A68
     background-repeat: no-repeat;
     background-size: cover;
 }
-.content{
+.banner .content{
     position: absolute;
-    top: 450px;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    z-index: 2;
 }
-.content>p:first-child{
-    font-size: 3rem;
+
+.banner .content .context>p:first-child{
+    font-size: 4rem;
     opacity: 0;
     animation: slideUp 0.8s ease-in-out 0s 1 normal forwards;
+    margin-bottom: 50px;
 }
-.content>p:nth-child(2){
+.banner .content .context>p:nth-child(2){
     opacity: 0;
     animation: slideUp 0.8s ease-in-out 0.2s 1 normal forwards;
+    margin-bottom: 50px;
 }
-.content>.sh-btn{
+.banner .content .sh-btn{
     opacity: 0;
     animation: slideUp 0.8s ease-in-out 0.4s 1 normal forwards;
 }
-
-.banner>div:last-child{
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
+.banner-down-arrows{
+    height: 40px;
+    width: 40px;
+    margin: 100px auto 0px;
+    position: relative;
 }
-.banner>div:last-child>i:nth-child(1){top: -20px; animation: slideDown 2s linear 0.4s infinite normal forwards;}
-.banner>div:last-child>i:nth-child(2){top: -10px; animation: slideDown 2s linear 0.2s infinite normal forwards;}
-.banner>div:last-child>i:nth-child(3){top: 0px; animation: slideDown 2s linear 0s infinite normal forwards;}
+.banner-down-arrows>i{
+    position: absolute;
+    left: 0;
+}
+.banner-down-arrows>i:nth-child(1){animation: slideDown 2s linear 0.6s infinite normal both running;}
+.banner-down-arrows>i:nth-child(2){animation: slideDown 2s linear 0.3s infinite normal both running;}
+.banner-down-arrows>i:nth-child(3){animation: slideDown 2s linear 0s infinite normal both running;}
 /* ------------------------------------Banner End------------------------------------ */
 
 
 
+/* ------------------------------------Video Start------------------------------------ */
+.video-bg{
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.video-bg .play-btn {
+    color: red;
+    font-size: 80px;
+    line-height: 1;
+}
+/* ------------------------------------Video End------------------------------------ */
+
+
 /* ------------------------------------Amenities Start------------------------------------ */
 
-.amenities>div>div{
+.amenities .facility{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 }
-.amenities>div>div>div{
+.amenities .facility:hover .facility-icon{
+    transform: translateY(15px);
+}
+.amenities .facility .facility-icon{
+    transition: all 1s;
     height: 130px;
     width: 130px;
     border-radius: 50%;
@@ -120,20 +179,96 @@ Green : #BD9A68
     justify-content: center;
     align-items: center;
     outline: 1px solid #BD9A68;
-    outline-offset: 5px;
+    outline-offset: 4px;
+    position: relative;
 }
-.amenities>div>div>div>i{
+.amenities .facility .facility-icon>span{
+    height: inherit;
+    width: inherit;
+    border-radius: inherit;
+    outline: 2px solid white;
+    outline-offset: -6px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.amenities .facility .facility-icon>i{
     font-size: 3.5rem;
     color: white;
 }
-.facility-title{
+.amenities .facility .facility-title{
     margin-top: 30px;
     font-family: 'Vidaloka', serif;
     font-size: 1.5rem;
     font-weight: bold;
 }
-.facility-description{
+.amenities .facility .facility-description{
     text-align: center;
     color: rgb(97, 97, 97);
 }
+
 /* ------------------------------------Amenities End------------------------------------ */
+
+
+
+/* ------------------------------------Featured Projects Start------------------------------------ */
+.featured-projects .featured-project{
+    position: relative;
+}
+.featured-projects .featured-project .shine-img{
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.featured-projects .featured-project:hover .shine-img{
+    transform: translateX(100%);
+}
+.featured-projects .featured-project .featured-project-img+div{
+    height: 500px;
+    width: 100%;
+    display: block;
+    background: rgba(255, 0, 0, 0.144);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/* ------------------------------------Featured Projects End------------------------------------ */
+
+
+/* ------------------------------------Footer Start------------------------------------ */
+.footer .send-mail input{
+    border: 0;
+    background: transparent;
+    flex-grow: 1;
+    color: white;
+}
+.footer .send-mail{
+    background: #272727;
+    padding-left: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.footer .send-mail button{
+    background: #BD9A68;
+    border: 0;
+    color: white;
+    padding: 10px 15px;
+}
+.footer .send-mail input:focus{
+    outline: 0;
+}
+.footer .menus a{
+    display: block;
+}
+.footer .menus span{
+    display: block;
+    height: 1px;
+    width: 0%;
+    background: #BD9A68;
+    margin-bottom: 15px;
+    transition: all 0.5s;
+}
+.footer .menus a:hover+span{
+    width: 100%;
+}
+/* ------------------------------------Footer End------------------------------------ */

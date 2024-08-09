@@ -258,6 +258,10 @@ header ul {
     transition: all 500ms ease;
     border: 1px solid #e2e2e2;
     border-radius: 3px;
+    text-decoration: none;
+}
+.clearfix>li>a:hover{
+    background: #BD9A68;
 }
 /* Media Queries */
 
@@ -319,9 +323,6 @@ header ul {
     .logo a img{
         margin: 0 0;
     }
-    header {
-        position: absolute;
-    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -343,9 +344,7 @@ header ul {
     .logo a img{
         margin: 0 0;
     }
-    header {
-        position: absolute;
-    }
+   
 }
 
 @media (max-width: 575.98px) {
@@ -367,7 +366,5 @@ header ul {
     .logo a img{
         margin: 0 0;
     }
-    header {
-        position: absolute;
-    }
+    
 }
