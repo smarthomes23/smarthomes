@@ -40,3 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Start the automatic background change on load
     startAutoToggle();
 });
+
+// Inquiry form
+let tncbtn = document.querySelector('.blog-area .inquiry-box .terms-condition i');
+let tncbtnclicked = false;
+tncbtn.addEventListener('click',function(){
+    if(!tncbtnclicked){
+        tncbtn.style.color = '#BD9A68';
+        tncbtnclicked = !tncbtnclicked;
+    }else{
+        tncbtn.style.color = 'rgb(236, 236, 236)';
+        tncbtnclicked = !tncbtnclicked;
+    }
+});

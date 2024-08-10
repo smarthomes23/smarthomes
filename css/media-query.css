@@ -35,6 +35,15 @@
         height: 500px;
         border: 10px;
     }
+    .testimonial-area .testimonial-item {
+        width: 100%;
+    }
+    .blog-area .inquiry-box .inquiry-form{
+        flex-direction: column;
+    }
+    .blog-area .inquiry-box .inquiry-form input{
+        width: 100%;
+    }
 }
 
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -54,6 +63,15 @@
         height: 300px;
         border: 10px;
     }
+    .testimonial-area .testimonial-item {
+        width: 100%;
+    }
+    .blog-area .inquiry-box .inquiry-form{
+        flex-direction: column;
+    }
+    .blog-area .inquiry-box .inquiry-form input{
+        width: 100%;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -72,5 +90,14 @@
     .video-bg{
         height: 200px;
         border: 10px;
+    }
+    .testimonial-area .testimonial-item {
+        width: 100%;
+    }
+    .blog-area .inquiry-box .inquiry-form{
+        flex-direction: column;
+    }
+    .blog-area .inquiry-box .inquiry-form input{
+        width: 100%;
     }
 }

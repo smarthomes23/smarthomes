@@ -1,4 +1,5 @@
-<header class="navigationbar">
+<?php include('./components/go-to-top.php');?>
+<header id="top" class="navigationbar">
     <div class="menu-area transparent-header">
         <div class="container custom-container">
             <div class="row">

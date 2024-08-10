@@ -218,9 +218,9 @@ Green : #BD9A68
 }
 .featured-projects .featured-project .shine-img{
     transform: translateX(-100%);
-    transition: all 1s;
 }
 .featured-projects .featured-project:hover .shine-img{
+    transition: all 1s;
     transform: translateX(100%);
 }
 .featured-projects .featured-project .featured-project-img+div{
@@ -234,41 +234,117 @@ Green : #BD9A68
 }
 /* ------------------------------------Featured Projects End------------------------------------ */
 
-
-/* ------------------------------------Footer Start------------------------------------ */
-.footer .send-mail input{
-    border: 0;
-    background: transparent;
-    flex-grow: 1;
-    color: white;
+/* ------------------------------------Testimonial Start------------------------------------ */
+.testimonial-area .testimonial-item {
+    display: flex;
+    align-items: center;
+    width: 75.5%;
+    margin-bottom: 30px;
 }
-.footer .send-mail{
-    background: #272727;
-    padding-left: 10px;
-    border-radius: 5px;
+.testimonial-area .testimonial-thumb {
+    position: relative;
+    width: 80px;
+    flex: 0 0 80px;
+    margin-right: 22px;
+}
+.testimonial-area .testimonial-content {
+    border: 1.3px solid black;
+    border-radius: 15px;
+    padding: 30px 30px;
+    position: relative;
+    margin-left: 12px;
+}
+.testimonial-area .testimonial-thumb .icon {
+    position: absolute;
+    right: 3px;
+    bottom: 3px;
+    line-height: 1;
+    color: #BD9A68;
+}
+.testimonial-area .testimonial-content::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-top: 1.3px solid black;
+    border-left: 1.3px solid black;
+}
+.testimonial-area .testimonial-item:nth-child(even) {
+    flex-direction: row-reverse;
+    margin-left: auto;
+}
+.testimonial-area .testimonial-item:nth-child(even) .testimonial-thumb {
+    margin-right: 0;
+    margin-left: 22px;
+}
+.testimonial-area .testimonial-item:nth-child(even) .testimonial-content::before {
+    left: auto;
+    right: -9px;
+    border-bottom: 1.3px solid black;
+    border-right: 1.3px solid black;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+}
+/* ------------------------------------Testimonial End------------------------------------ */
+
+
+
+/* ------------------------------------Blog area Start------------------------------------ */
+.blog-area .blog-content .breadcrumb .breadcrumb-item{
+    font-size: 0.8rem;
+}
+.blog-area .blog-item-wrap .blog-item .blog-thumb{
+    border-radius: 20px;
     overflow: hidden;
 }
-.footer .send-mail button{
+.blog-area .blog-item-wrap .blog-item .blog-thumb img,
+.blog-area .blog-item-wrap .blog-item .blog-content p a{
+    transition: all 1s;
+}
+.blog-area .blog-item-wrap .blog-item .blog-content p a{
+    color: black;
+}
+.blog-area .blog-item-wrap .blog-item:hover .blog-thumb img{
+    transform: scale(1.2);
+}
+.blog-area .blog-item-wrap .blog-item:hover .blog-content p a{
+    color: #BD9A68;
+}
+.blog-area .inquiry-box{
+    border-radius: 20px;
+}
+.blog-area .inquiry-box .inquiry-form{
+    display: flex;
+    justify-content: center;
+}
+.blog-area .inquiry-box .inquiry-form input{
+    border-radius: 10px;
+    border: 1px solid #BD9A68;
+    margin-bottom: 20px;
+}
+.blog-area .inquiry-box .inquiry-form input:not(:last-child){
+    margin-right: 20px;
+}
+.blog-area .inquiry-box .inquiry-form input:last-child{
     background: #BD9A68;
-    border: 0;
     color: white;
-    padding: 10px 15px;
-}
-.footer .send-mail input:focus{
-    outline: 0;
-}
-.footer .menus a{
-    display: block;
-}
-.footer .menus span{
-    display: block;
-    height: 1px;
-    width: 0%;
-    background: #BD9A68;
-    margin-bottom: 15px;
     transition: all 0.5s;
 }
-.footer .menus a:hover+span{
-    width: 100%;
+.blog-area .inquiry-box .inquiry-form input:last-child:hover{
+    background: black;
+    border-color: black;
 }
-/* ------------------------------------Footer End------------------------------------ */
+.blog-area .inquiry-box .inquiry-form input:focus{
+    outline: 0;
+    border-color: black;
+}
+.blog-area .inquiry-box .terms-condition i{
+    color: #ececec;
+    cursor: pointer;
+}
+/* ------------------------------------Blog area End------------------------------------ */
+
